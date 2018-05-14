@@ -1,0 +1,9 @@
+---
+layout: home
+title: Blog
+---
+{% for post in site.posts %}
+<h2 class="post-title">{{ post.title }}</h2>
+<h3 class="post-date">{{ post.date | date_to_string }}</h3>
+{{ post.content }}
+{% endfor %}

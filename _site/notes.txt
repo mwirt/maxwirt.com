@@ -1,0 +1,14 @@
+$(document).ready(function(){
+  var colors = ["#CCCCCC","#333333","#990099"];                
+  var rand = Math.floor(Math.random()*colors.length);           
+  $('#controls-wrapper').css("background-color", colors[rand]);
+  $('h1').css("color", colors[rand]);
+});
+After you have created your colors array you then get a random number corresponding to the index of a color.
+
+Now that you have a random index you can use it to set the background-color, or text color of an object.
+
+If you wanted the colors to be different for each then you would just call
+
+rand = Math.floor(Math.random()*colors.length);
+again before setting the color of your next element.

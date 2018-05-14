@@ -1,0 +1,26 @@
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="theme-color" content="{{ site.theme-color }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+	<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
+	<meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
+	<meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
+	<meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
+	<meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
+	<meta name="rating" content="General">
+	{% include head/geotags.html %}
+	{% include head/fb-meta.html %}
+	{% include head/twitter-meta.html %}
+	{% include head/favicon.html %}
+	<title>{% if page.title %}{{ page.title }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+	<script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/webfont.js"></script>
+	<script type="text/javascript" src="/assets/js/main.js"></script>
+</head>

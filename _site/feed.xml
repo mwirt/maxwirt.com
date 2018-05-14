@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-14T02:04:54-04:00</updated><id>http://localhost:4000/</id><title type="html">Max Wirt Maximum Website</title><subtitle>This is the personal website of Max Wirt.
+</subtitle><entry><title type="html">My First Blog Post</title><link href="http://localhost:4000/2018/05/10/first-blog-post.html" rel="alternate" type="text/html" title="My First Blog Post" /><published>2018-05-10T00:00:00-04:00</published><updated>2018-05-10T00:00:00-04:00</updated><id>http://localhost:4000/2018/05/10/first-blog-post</id><content type="html" xml:base="http://localhost:4000/2018/05/10/first-blog-post.html">&lt;p&gt;This is my first blog post. Just wanted to update everybody. You can visit my website by clicking &lt;a href=&quot;http://maxwirt.com&quot;&gt;here&lt;/a&gt;. I hope its a nice day today. I’ve been really sad lately.&lt;/p&gt;
+
+&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+  &lt;iframe class=&quot;embed-responsive-item&quot; src=&quot;https://www.youtube.com/embed/v1CiINFsBkY&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I love watching this video because it makes me think of growing up as a kid.&lt;/p&gt;</content><author><name></name></author><summary type="html">This is my first blog post. Just wanted to update everybody. You can visit my website by clicking here. I hope its a nice day today. I’ve been really sad lately.</summary></entry></feed>

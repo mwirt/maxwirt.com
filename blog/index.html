@@ -1,9 +1,30 @@
 ---
-layout: home
+layout: default
 title: Blog
+background-image: tile30.jpg
 ---
+<div style="background-image: url('/assets/img/bg/{{ page.background-image }}');" class="background">
+<div class="liner">
+<marquee behavior="scroll" direction="left"><h2>MAXIMUM BLOG!!!</h2></marquee>
+<div class="container">
+	<h3><i>Entries:</i></h3>
+<div class="post-index">
 {% for post in site.posts %}
-<h2 class="post-title">{{ post.title }}</h2>
-<h3 class="post-date">{{ post.date | date_to_string }}</h3>
-{{ post.content }}
+<a class="post-index-link" href="{{ site.baseurl }}{{ post.url }}">
+<div class="post-index-post-wrap">
+<div class="post-index-post randombg">
+<h4 class="post-index-title">{{ post.title }}</h4>
+<h5 class="post-index-date">{{ post.date | date_to_string }}</h5>
+{% if post.header-img %}
+<div style="background-image: url('/assets/img/{{ post.header-img }}')" class="post-banner"></div>
+{% else %}
+{% endif %}
+<p class="post-index-tagline">{{ post.tagline }}</p>
+</div>
+</div>
+</a>
 {% endfor %}
+</div>
+</div>
+</div>
+</div>

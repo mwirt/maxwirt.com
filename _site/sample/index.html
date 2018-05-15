@@ -41,30 +41,31 @@
 	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 	<script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/fontawesome-all.min.js"></script>
 	<script type="text/javascript" src="/assets/js/webfont.js"></script>
 	<script type="text/javascript" src="/assets/js/main.js"></script>
 </head>
 <body>
-	
+<div class="default-wrap">
 <header class="default-header">
 	<div class="">
 		<div class=""><a href="/"><img class="img-fluid default-header-photo" src="/assets/img/max-wirt.jpg" alt="An artistic picture of Max Wirt"></a></div>
 		<h1 class="home-title">Max Wirt Maximum Website</h1>
 		<nav>
 			<ul>
-				<a href="/blog"><li class="nav-item">Blog</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">Tequila Trails</li></a>
-				<a href="/about"><li class="nav-item">Sincerely Productions</li></a>
-				<a href="/about"><li class="nav-item">Gold Paint Boy</li></a>
-				<a href="/about"><li class="nav-item">Shattered Mirrors</li></a>
-				<a href="/sample"><li class="nav-item">Katies Crossing</li></a>
-				<a href="/about"><li class="nav-item">Websites I've Made</li></a>
-				<a href="/about"><li class="nav-item">Video Loop Feedback</li></a>
-				<a href="/about"><li class="nav-item">Video Booth</li></a>
-				<a href="/about"><li class="nav-item">Detroit DIY</li></a>
-				<a href="/about"><li class="nav-item">Great Lakesmen</li></a>
-				<a href="/about"><li class="nav-item">I Love You Charles</li></a>
+				<a href="/blog"><li class="nav-item">Blog<span class="emoji-wrap"><i class="em em-notebook"></i></span></li></a>
+				<a href="/about"><li class="nav-item">About Me<span class="emoji-wrap"><i class="em em-slightly_smiling_face"></i></span></li></a>
+				<a href="/tequilatrails"><li class="nav-item">Tequila Trails<span class="emoji-wrap"><i class="em em-bicyclist"></i></span></li></a>
+				<a href="/sincerely"><li class="nav-item">Sincerely Productions<span class="emoji-wrap"><i class="em em-movie_camera"></i></span></li></a>
+				<a href="/goldpaintboy"><li class="nav-item">Gold Paint Boy<span class="emoji-wrap"><i class="em em-guitar"></i></span></li></a>
+				<a href="/shatteredmirrors"><li class="nav-item">Shattered Mirrors<span class="emoji-wrap"><i class="em em-cat"></i></span></li></a>
+				<a href="/katiescrossing"><li class="nav-item">Katies Crossing<span class="emoji-wrap"><i class="em em-female-detective"></i></span></li></a>
+				<a href="/webdesign"><li class="nav-item">Web Design<span class="emoji-wrap"><i class="em em-male-technologist"></i></span></li></a>
+				<a href="/videoloop"><li class="nav-item">Video Loop Feedback<span class="emoji-wrap"><i class="em em-video_camera"></i></span></li></a>
+				<a href="/videobooth"><li class="nav-item">Video Booth<span class="emoji-wrap"><i class="em em-tv"></i></span></li></a>
+				<a href="/detroitdiy"><li class="nav-item">Detroit DIY</li></a>
+				<a href="/greatlakesmen"><li class="nav-item">Great Lakesmen</li></a>
+				<a href="/iloveyoucharles"><li class="nav-item">I Love You Charles<span class="emoji-wrap"><i class="em em-dog"></i></span></li></a>
 				<a href="/about"><li class="nav-item">About Me</li></a>
 				<a href="/about"><li class="nav-item">About Me</li></a>
 				<a href="/about"><li class="nav-item">About Me</li></a>
@@ -92,23 +93,173 @@
 		</nav>
 	</div>	
 </header>
-<div class="default-wrap">
+<div class="default-inner">
+<div class="container-fluid">
 <div class="container">
 	
 <article class="post">
 	<header class="post-header">
-		<a class="post-url" href="/2018/05/10/first-blog-post.html">
-			<h2 class="post-title">My First Blog Post<h2>
+		<a class="post-url" href="/2018/05/14/video-feedback-opencv/">
+			<h2 class="post-title">Feedback Loops with OpenCV<h2>
+		</a>
+		<h3 class="post-date">14 May 2018</h3>
+	</header>
+	  <div class="blog-text">Last week I had some free time so I learned <a href="https://docs.opencv.org/3.4/index.html">how to set up OpenCV</a>, pulled out a thrift store webcam, and started tinkering. <a href="https://opencv.org/">OpenCV</a> is a suuuper cooool and powerful library that you can use to do all kinds of amazing things with robotics and security systems and smart phones and its changing the world and so of course I <i>had</i> to sit down with it and make my face look weird.
+  </div>
+
+</div>
+<div class="blog-text">
+  I played around with some of the blurs and color filtering capabilities just to kinda see how it all worked and got some interesting results:
+</div>
+<div class="row align-items-center">
+	<div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop30.png"></div>
+  <div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop29.png"></div>
+</div>
+  <div class="row align-items-center rowfix">
+  <div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop25.jpg"></div>
+  <div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop27.jpg"></div>
+</div>
+<div class="blog-text centered-text">
+  Eventually I turned the camera toward the monitor to create a loop and got some lovely glitchy goodness.
+</div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop1.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop2.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop3.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop4.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop5.jpg"></div>
+<div class="blog-text">
+   There's additional images at the bottom of this post. OpenCV is capable of doing a great deal more than just producing some weird images but as someone who loves the weird images, I can go far with this kind of thing. And maybe one day I'll figure out how to do all the important life changing stuff, but for now enjoy these bent and beautiful computer paintings.
+</div>
+<div class="blog-text">I used python for this and if you are interested in looking at the code I used to achieve these images, see below! You'll need to install OpenCV though which itself can be a challenge. I found it easiest to use the <a href="https://www.anaconda.com/what-is-anaconda/">Anaconda</a> package manager which I already had installed on my machine. </div>
+<div class="code-wrap">
+	<code>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">cv2</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c"># set frame counter</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c"># I have two webcams, one is connected via usb and the other is built in.</span>
+<span class="c"># To create a loop by turning the camera on the monitor, you will need a peripheral webcam.</span>
+
+<span class="n">cap1</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c"># USB webcam</span>
+<span class="n">cap2</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># Built-in webcam</span>
+
+
+<span class="k">while</span><span class="p">(</span><span class="bp">True</span><span class="p">):</span>
+    
+    <span class="c"># Capture frame-by-frame</span>
+    
+    <span class="n">ret1</span><span class="p">,</span> <span class="n">frame1</span> <span class="o">=</span> <span class="n">cap1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">ret2</span><span class="p">,</span> <span class="n">frame2</span> <span class="o">=</span> <span class="n">cap2</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="c"># Resize playback windows, width is desired new width</span>
+    
+    <span class="n">width</span> <span class="o">=</span> <span class="mi">600</span> <span class="c"># change this number to desired width</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">width</span> <span class="o">/</span> <span class="n">frame1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">frame1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">r</span><span class="p">)</span>
+    <span class="n">dim</span> <span class="o">=</span> <span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">)</span>
+    
+    <span class="n">resized1</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame1</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">interpolation</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_AREA</span><span class="p">)</span>
+    <span class="n">resized2</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">frame2</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">interpolation</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">INTER_AREA</span><span class="p">)</span>
+    
+    <span class="c"># Add effects</span>
+    
+    <span class="n">blur1</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">resized1</span><span class="p">,(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">blur2</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="n">resized2</span><span class="p">,(</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span><span class="mi">200</span><span class="p">)</span>
+    <span class="n">filt1</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bilateralFilter</span><span class="p">(</span><span class="n">blur1</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">75</span><span class="p">)</span>
+    <span class="n">filt2</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">bilateralFilter</span><span class="p">(</span><span class="n">blur2</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">75</span><span class="p">)</span>
+    
+    <span class="c">#convert to HSV from BGR</span>
+    
+    <span class="n">hsv1</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">filt1</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2HSV</span><span class="p">)</span>
+    <span class="n">hsv2</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">filt2</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2HSV</span><span class="p">)</span>
+    
+    <span class="c"># show the windows with the images</span>
+
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'orig1'</span><span class="p">,</span> <span class="n">resized1</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'result1'</span><span class="p">,</span> <span class="n">hsv1</span><span class="p">)</span>
+    
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'orig2'</span><span class="p">,</span><span class="n">resized2</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="s">'result2'</span><span class="p">,</span><span class="n">hsv2</span><span class="p">)</span>
+    
+    <span class="c">#move windows so they don't overlap</span>
+    
+    <span class="n">wh</span> <span class="o">=</span> <span class="p">(</span><span class="n">height</span><span class="o">+</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">moveWindow</span><span class="p">(</span><span class="s">'orig1'</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">moveWindow</span><span class="p">(</span><span class="s">'orig2'</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">wh</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">moveWindow</span><span class="p">(</span><span class="s">'result1'</span><span class="p">,</span><span class="n">width</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cv2</span><span class="o">.</span><span class="n">moveWindow</span><span class="p">(</span><span class="s">'result2'</span><span class="p">,</span><span class="n">width</span><span class="p">,</span><span class="n">wh</span><span class="p">)</span>
+    
+    <span class="c"># capture frames</span>
+    <span class="c"># count%x == 0 means to go every x frames</span>
+    <span class="c"># in this case it is capturing every 5 frames</span>
+    <span class="c"># this was fine since it was going slow for me with the effects and such</span>
+    <span class="c"># imwrite writes the file to the destination file name you set</span>
+    <span class="c"># the random bit is to add a random number to the end of the filename so they don't overwrite</span>
+        
+    <span class="k">if</span> <span class="n">count</span><span class="o">%</span><span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s">'pics/opencv/capture</span><span class="si">%</span><span class="s">d.jpg'</span><span class="o">%</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000000</span><span class="p">)),</span><span class="n">hsv1</span><span class="p">)</span>
+        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s">'pics/opencv/capture</span><span class="si">%</span><span class="s">d.jpg'</span><span class="o">%</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000000</span><span class="p">)),</span><span class="n">hsv2</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'captured frame'</span><span class="p">)</span>
+    
+    <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+
+    <span class="c"># press 'q' to stop</span>
+    
+    <span class="k">if</span> <span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFF</span> <span class="o">==</span> <span class="nb">ord</span><span class="p">(</span><span class="s">'q'</span><span class="p">):</span>
+        <span class="k">break</span>
+
+<span class="c"># When everything is done, this releases the capture</span>
+
+<span class="n">cap1</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="n">cap2</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">destroyAllWindows</span><span class="p">()</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></code></pre></figure>
+</code>
+</div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop6.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop7.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop8.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop9.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop10.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop11.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop12.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop13.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop14.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop15.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop16.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop17.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop18.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop19.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop21.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop22.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop23.jpg"></div>
+
+
+
+</article>
+
+<article class="post">
+	<header class="post-header">
+		<a class="post-url" href="/2018/05/10/first-blog-post/">
+			<h2 class="post-title">Starting Fresh<h2>
 		</a>
 		<h3 class="post-date">10 May 2018</h3>
 	</header>
-	<p>This is my first blog post. Just wanted to update everybody. You can visit my website by clicking <a href="http://maxwirt.com">here</a>. I hope its a nice day today. I’ve been really sad lately.</p>
+	<div class="blog-text">
+	<p>This is my first blog post. Just wanted to update everybody. You can visit my website by clicking [here](http://maxwirt.com). I hope its a nice day today. I've been really sad lately.
+	</p>
+</div>
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v1CiINFsBkY" allowfullscreen=""></iframe>
 </div>
 
-<p>I love watching this video because it makes me think of growing up as a kid.</p>
+<div class="blog-text">
+	<p>I love watching this video because it makes me think of growing up as a kid.</p>
+</div>
 
 
 
@@ -116,6 +267,8 @@
 
 
 
+</div>
+</div>
 </div>
 </div>
 </body>

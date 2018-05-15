@@ -1,34 +1,54 @@
-.default-header
-	background-color: $blue
-	height: 100vh
-	color: #fff
-	padding: 0
-	width: 300px
-	position: fixed
-	overflow: scroll
-
-.home-title
-	display: block
-	font-size: 1.2rem
-
 a
 	color: $red
 a:hover
-	color: $ltred
-	text-decoration: none
+	color: $red
+	text-decoration: underline
 
-.default-header-photo
-	float: left
-	width: auto
-	height: 200px
-
-@media (max-width:600px)
-	.default-header
-		height: 100px
-	.default-header-photo
-		height: 100px
-	.site-title
-		font-size: 1.4rem !important
+a.black
+	color: #000
+a.black:hover
+	color: #000
 
 .default-wrap
-	margin-left: 300px
+	max-width: 100%
+	position: relative
+
+
+.background
+	background-repeat: repeat
+	background-attachment: fixed
+	background-position: center 
+	height: 100%
+	min-height: 100vh
+
+.liner
+	background-color: rgba(255,255,255,0.8)
+	width: 100%
+	height: 100%
+	min-height: 100vh
+
+.default-inner
+	margin-left: 260px
+
+.rowfix
+	padding-left: 15px
+	padding-right: 15px
+
+.pos-left
+	padding-left: 0px
+
+.pos-right
+	padding-right: 0px
+
+.centered-text
+	text-align: center
+
+code
+	font-family: "Oxygen Mono", monospace
+	font-size: 1rem !important
+
+.code-wrap
+	padding: 30px
+	margin: 50px 0px
+	background-color: #fff
+	font-size: 1rem

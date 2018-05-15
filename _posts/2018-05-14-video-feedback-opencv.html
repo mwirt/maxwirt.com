@@ -1,0 +1,147 @@
+---
+layout: post
+title: Feedback Loops with OpenCV
+date: 2018-05-14 16:00
+tagline: Last week, I had some free time so I set up OpenCV on my computer, pulled out a thrift store webcam, and started tinkering.
+background-image: tile1.jpg
+header-img: opencv/opencvloop7.jpg
+---
+
+
+  <div class="blog-text">Last week I had some free time so I learned <a href="https://docs.opencv.org/3.4/index.html">how to set up OpenCV</a>, pulled out a thrift store webcam, and started tinkering. <a href="https://opencv.org/">OpenCV</a> is a suuuper cooool and powerful library that you can use to do all kinds of amazing things with robotics and security systems and smart phones and its changing the world and so of course I <i>had</i> to sit down with it and make my face look weird.
+  </div>
+
+</div>
+<div class="blog-text">
+  I played around with some of the blurs and color filtering capabilities just to kinda see how it all worked and got some interesting results:
+</div>
+<div class="row align-items-center">
+	<div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop30.png"></div>
+  <div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop29.png"></div>
+</div>
+  <div class="row align-items-center rowfix">
+  <div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop25.jpg"></div>
+  <div class="img-wrap col-sm-6"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop27.jpg"></div>
+</div>
+<div class="blog-text centered-text">
+  Eventually I turned the camera toward the monitor to create a loop and got some lovely glitchy goodness.
+</div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop1.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop2.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop3.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop4.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop5.jpg"></div>
+<div class="blog-text">
+   There's additional images at the bottom of this post. OpenCV is capable of doing a great deal more than just producing some weird images but as someone who loves the weird images, I can go far with this kind of thing. And maybe one day I'll figure out how to do all the important life changing stuff, but for now enjoy these bent and beautiful computer paintings.
+</div>
+<div class="blog-text">I used python for this and if you are interested in looking at the code I used to achieve these images, see below! You'll need to install OpenCV though which itself can be a challenge. I found it easiest to use the <a href="https://www.anaconda.com/what-is-anaconda/">Anaconda</a> package manager which I already had installed on my machine. </div>
+<div class="code-wrap">
+	<code>
+{% highlight python %}
+
+import cv2
+import random
+
+# set frame counter
+
+count = 0
+
+# I have two webcams, one is connected via usb and the other is built in.
+# To create a loop by turning the camera on the monitor, you will need a peripheral webcam.
+
+cap1 = cv2.VideoCapture(0) # USB webcam
+cap2 = cv2.VideoCapture(1) # Built-in webcam
+
+
+while(True):
+    
+    # Capture frame-by-frame
+    
+    ret1, frame1 = cap1.read()
+    ret2, frame2 = cap2.read()
+
+    # Resize playback windows, width is desired new width
+    
+    width = 600 # change this number to desired width
+    r = width / frame1.shape[1]
+    height = int(frame1.shape[0] * r)
+    dim = (width,height)
+    
+    resized1 = cv2.resize(frame1, dim, interpolation = cv2.INTER_AREA)
+    resized2 = cv2.resize(frame2, dim, interpolation = cv2.INTER_AREA)
+    
+    # Add effects
+    
+    blur1 = cv2.GaussianBlur(resized1,(11,11),100)
+    blur2 = cv2.GaussianBlur(resized2,(11,11),200)
+    filt1 = cv2.bilateralFilter(blur1,33,75,75)
+    filt2 = cv2.bilateralFilter(blur2,33,75,75)
+    
+    #convert to HSV from BGR
+    
+    hsv1=cv2.cvtColor(filt1, cv2.COLOR_BGR2HSV)
+    hsv2=cv2.cvtColor(filt2, cv2.COLOR_BGR2HSV)
+    
+    # show the windows with the images
+
+    cv2.imshow('orig1', resized1)
+    cv2.imshow('result1', hsv1)
+    
+    cv2.imshow('orig2',resized2)
+    cv2.imshow('result2',hsv2)
+    
+    #move windows so they don't overlap
+    
+    wh = (height+45)
+    cv2.moveWindow('orig1',0,0)
+    cv2.moveWindow('orig2',0,wh)
+    cv2.moveWindow('result1',width,0)
+    cv2.moveWindow('result2',width,wh)
+    
+    # capture frames
+    # count%x == 0 means to go every x frames
+    # in this case it is capturing every 5 frames
+    # this was fine since it was going slow for me with the effects and such
+    # imwrite writes the file to the destination file name you set
+    # the random bit is to add a random number to the end of the filename so they don't overwrite
+        
+    if count%5 == 0:
+        cv2.imwrite('pics/opencv/capture%d.jpg'%(random.randint(1,10000000)),hsv1)
+        cv2.imwrite('pics/opencv/capture%d.jpg'%(random.randint(1,10000000)),hsv2)
+        print('captured frame')
+    
+    count+=1
+
+    # press 'q' to stop
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# When everything is done, this releases the capture
+
+cap1.release()
+cap2.release()
+cv2.destroyAllWindows()
+cv2.waitKey(1)
+
+
+{% endhighlight %}
+</code>
+</div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop6.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop7.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop8.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop9.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop10.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop11.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop12.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop13.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop14.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop15.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop16.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop17.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop18.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop19.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop21.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop22.jpg"></div>
+<div class="img-wrap col-sm-12"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop23.jpg"></div>

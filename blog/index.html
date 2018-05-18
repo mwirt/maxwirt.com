@@ -10,16 +10,16 @@ background-image: tile30.jpg
 	<h3><i>Entries:</i></h3>
 <div class="post-index">
 {% for post in site.posts %}
-<a class="post-index-link" href="{{ site.baseurl }}{{ post.url }}">
+<a class="post-index-link" href="{{ site.url }}{{ post.url }}">
 <div class="post-index-post-wrap">
 <div class="post-index-post randombg">
 <h4 class="post-index-title">{{ post.title }}</h4>
 <h5 class="post-index-date">{{ post.date | date_to_string }}</h5>
-{% if post.header-img %}
-<div style="background-image: url('/assets/img/{{ post.header-img }}')" class="post-banner"></div>
+{% if post.post-header-image %}
+<div style="background-image: url('/assets/img/{{ post.post-header-image }}')" class="post-banner"></div>
 {% else %}
 {% endif %}
-<p class="post-index-tagline">{{ post.tagline }}</p>
+<p class="post-index-tagline">{{ post.post-tagline }}</p>
 </div>
 </div>
 </a>

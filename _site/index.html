@@ -17,19 +17,19 @@
 	<meta name="rating" content="General">
 	<meta name="geo.region" content="US-MI" />
 <meta name="geo.placename" content="Detroit" />
-	<meta property="og:url" content="">
+	<meta property="og:url" content="http://localhost:4000/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="">
-<meta property="og:image" content="">
+<meta property="og:image" content="http://localhost:4000/assets/img/">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Max Wirt Maximum Website">
 <meta property="og:locale" content="en_US">
 	<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@site_account"><!--@username of website. Either twitter:site or twitter:site:id is required.-->
-<meta name="twitter:url" content="">
+<meta name="twitter:url" content="http://localhost:4000/">
 <meta name="twitter:title" content="">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="">
+<meta name="twitter:image" content="http://localhost:4000/assets/img/">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -47,11 +47,20 @@
 </head>
 <body>
 <div class="default-wrap">
-<header class="default-header">
-	<div class="">
+<header id="mySidenav" class="default-header">
+	<div class="default-header-inner">
 		<div class=""><a href="/"><img class="img-fluid default-header-photo" src="/assets/img/max-wirt.jpg" alt="An artistic picture of Max Wirt"></a></div>
+		<div id="menu">
 		<h1 class="home-title">Max Wirt Maximum Website</h1>
-		<nav>
+		<p class="email">me@maxwirt.com</p>
+		<ul class="social-icons">
+			<a target="_blank" href="https://www.facebook.com/max.wirt.3"><li><span><i class="fab fa-facebook"></i></span></li></a>
+			<a target="_blank" href="https://www.instagram.com/sincerelytv/"><li><span><i class="fab fa-instagram"></i></span></li></a>
+			<a target="_blank" href="https://twitter.com/goldpaintboy"><li><span><i class="fab fa-twitter"></i></span></li></a>
+			<a target="_blank" href="https://github.com/mwirt/"><li><span><i class="fab fa-github"></i></span></li></a>
+		</ul>
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<nav class="site-navigation">
 			<ul>
 				<a href="/blog"><li class="nav-item">Blog<span class="emoji-wrap"><i class="em em-notebook"></i></span></li></a>
 				<a href="/about"><li class="nav-item">About Me<span class="emoji-wrap"><i class="em em-slightly_smiling_face"></i></span></li></a>
@@ -69,32 +78,18 @@
 				<a href="/about"><li class="nav-item">About Me</li></a>
 				<a href="/about"><li class="nav-item">About Me</li></a>
 				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/blog"><li class="nav-item">Blog</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">Tequila Trails</li></a>
-				<a href="/about"><li class="nav-item">Sincerely Productions</li></a>
-				<a href="/about"><li class="nav-item">Gold Paint Boy</li></a>
-				<a href="/about"><li class="nav-item">Shattered Mirrors</li></a>
-				<a href="/about"><li class="nav-item">Katies Crossing</li></a>
-				<a href="/about"><li class="nav-item">Websites I've Made</li></a>
-				<a href="/about"><li class="nav-item">Video Loop Feedback</li></a>
-				<a href="/about"><li class="nav-item">Video Booth</li></a>
-				<a href="/about"><li class="nav-item">Detroit DIY</li></a>
-				<a href="/about"><li class="nav-item">Great Lakesmen</li></a>
-				<a href="/about"><li class="nav-item">I Love You Charles</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
-				<a href="/about"><li class="nav-item">About Me</li></a>
 			</ul>
 		</nav>
-	</div>	
+	</div>
+	</div>
 </header>
 <div class="default-inner">
+<div class="mobile-header">
+	<span class="toggle-button" onclick="openNav()"><i class="fas fa-bars"></i></span>
+</div>
 <div class="container-fluid">
+	<div class="inner-container">
+	
 <h3>Montepaone</h3>
 <p>is a town and comune of the province of Catanzaro in the Calabria region of southern Italy. Montepaone sits on the Italian Ionian sea in the Gulf of Squillace. Soverato, Gasperina, Montauro are nearby towns. Montepaone is highly reliant on seasonal tourism both from Italian-Americans visiting family in the region and from Northern Italians. The work force in the town is around 19% of the total population. Lavigeria grandis is a species of tropical freshwater snail with a gill and an operculum, aquatic gastropod mollusc in the family Paludomidae.
 </p>
@@ -122,10 +117,12 @@
 <p>efforts in the Middle East started on November 22, 1967, when the United Nations (UN) Security Council adopted Resolution 242. This resolution still constitutes the basis for all settlement attempts of the Arab Israeli dispute. Essentially, the resolution calls for “recognition of the sovereignty, territorial integrity and political independence of every state in the region and of each people right to live in peace within secure and internationally recognized borders ”.</p>
  <audio class="audio-full-width" controls>
 	<source src="/assets/audio/oedipusrexplay.mp3" type="audio/mpeg">
-</audio> <audio class="audio-full-width" controls>
+</audio> 
+ <audio class="audio-full-width" controls>
 	<source src="/assets/audio/uncanny-final-song.mp3" type="audio/mpeg">
 </audio>
 
+</div>
 </div>
 </div>
 </div>

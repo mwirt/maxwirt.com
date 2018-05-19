@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-{% include head/head.html %}
-<body>
-<div class="default-wrap">
-{% include header.html %}
-<div class="default-inner">
-<div class="mobile-header">
-	<span class="toggle-button" onclick="navFunction()"><i id="nav-icon" class="fas fa-bars"></i></span>
-</div>
-<div class="container-fluid">
-	<div class="inner-container">
-	
-{{ content }}
-</div>
-</div>
-</div>
-</div>
-</body>
-</html>
+{% include head.html %}
 
+<body>
+    <div class="default-wrap">
+        {% include header.html %}
+        <div class="default-inner">
+            <div class="mobile-header">
+                <span class="toggle-button" onclick="navFunction()"><i id="nav-icon" class="fas fa-bars"></i></span>
+            </div>
+            <div class="container-fluid">
+                <div class="inner-container">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

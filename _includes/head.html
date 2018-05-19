@@ -12,9 +12,21 @@
 	<meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
 	<meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
 	<meta name="rating" content="General">
-	{% include head/geotags.html %}
-	{% include head/fb-meta.html %}
-	{% include head/tw-meta.html %}
+	<meta name="geo.region" content="US-MI" />
+	<meta name="geo.placename" content="Detroit" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="{% if page.title %}{{ page.title }}&nbsp;//&nbsp;{{ site.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta property="og:image" content="{{ site.url }}/assets/img/{{ page.share-image }}">
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:locale" content="en_US">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@site_account"><!--@username of website. Either twitter:site or twitter:site:id is required.-->
+	<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}&nbsp;//&nbsp;{{ site.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}">
+	<meta name="twitter:image" content="{{ site.url }}/assets/img/{{ page.share-image }}">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">

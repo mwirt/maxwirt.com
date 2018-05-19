@@ -2,29 +2,28 @@
 layout: post
 title: Feedback Loops with OpenCV
 date: 2018-05-14 16:00
+description: Last week, I had some free time so I set up OpenCV on my computer, pulled out a thrift store webcam, and started tinkering.
 post-tagline: Last week, I had some free time so I set up OpenCV on my computer, pulled out a thrift store webcam, and started tinkering.
 background-image: tile1.jpg
 post-header-image: opencv/opencvloop9.jpg
+share-image: opencv/opencvloop9.jpg
 ---
-
-
-  <div class="blog-text">Last week I had some free time so I learned <a href="https://docs.opencv.org/3.4/index.html">how to set up OpenCV</a>, pulled out a thrift store webcam, and started tinkering. <a href="https://opencv.org/">OpenCV</a> is a suuuper cooool and powerful library that you can use to do all kinds of amazing things with robotics and security systems and smart phones and its changing the world and so of course I <i>had</i> to sit down with it and make my face look weird.
-  </div>
-
+<div class="blog-text">
+    Last week I had some free time so I learned <a href="https://docs.opencv.org/3.4/index.html">how to set up OpenCV</a>, pulled out a thrift store webcam, and started tinkering. <a href="https://opencv.org/">OpenCV</a> is a suuuper cooool and powerful library that you can use to do all kinds of amazing things with robotics and security systems and smart phones and its changing the world and so of course I <i>had</i> to sit down with it and make my face look weird.
 </div>
 <div class="blog-text">
-  I played around with some of the blurs and color filtering capabilities just to kinda see how it all worked and got some promising results:
+    I played around with some of the blurs and color filtering capabilities just to kinda see how it all worked and got some promising results:
 </div>
 <div class="row align-items-center">
-	<div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop30.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop30.png"></a></div>
-  <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop29.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop29.png"></a></div>
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop30.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop30.png"></a></div>
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop29.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop29.png"></a></div>
 </div>
-  <div class="row align-items-center rowfix">
-  <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop25.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop25.png"></a></div>
-  <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop27.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop27.jpg"></a></div>
+<div class="row align-items-center rowfix">
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop25.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop25.png"></a></div>
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop27.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop27.jpg"></a></div>
 </div>
 <div class="blog-text centered-text">
-  I found a setting I liked, turned the camera toward the monitor to create a loop, and got some lovely glitchy goodness...
+    I found a setting I liked, turned the camera toward the monitor to create a loop, and got some lovely glitchy goodness...
 </div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop1.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop1.jpg"></a></div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop2.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop2.jpg"></a></div>
@@ -32,12 +31,12 @@ post-header-image: opencv/opencvloop9.jpg
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop4.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop4.jpg"></a></div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop5.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop5.jpg"></a></div>
 <div class="blog-text">
-   <p>There's additional images at the bottom of this post.</p>
-   <p>OpenCV is capable of doing a great deal more than just producing trippy images but as someone who loves trippy images, I'm quite pleased with this kind of thing. Maybe one day I'll figure out how to do all the important life changing stuff with OpenCV, but for now enjoy these bent and beautiful computer paintings.</p>
+    <p>There's additional images at the bottom of this post.</p>
+    <p>OpenCV is capable of doing a great deal more than just producing trippy images but as someone who loves trippy images, I'm quite pleased with this kind of thing. Maybe one day I'll figure out how to do all the important life changing stuff with OpenCV, but for now enjoy these bent and beautiful computer paintings.</p>
 </div>
 <div class="blog-text">I used python for this and if you are interested in looking at the code I used to achieve these images, see below! You'll need to have OpenCV installed though which itself can be a challenge. I found it easiest to use the <a href="https://www.anaconda.com/what-is-anaconda/">Anaconda</a> package manager which I already had on my machine. </div>
 <div class="code-wrap">
-	<code>
+    <code>
 {% highlight python %}
 
 import cv2

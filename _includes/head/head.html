@@ -15,12 +15,18 @@
 	{% include head/geotags.html %}
 	{% include head/fb-meta.html %}
 	{% include head/tw-meta.html %}
-	{% include head/favicon.html %}
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="{{ site.theme-color }}">
+	<meta name="msapplication-TileColor" content="{{ site.theme-color }}">
 	<title>{% if page.title %}{{ page.title }}&nbsp;//&nbsp;{{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 	<script type="text/javascript" src="/assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/assets/js/lightbox.min.js"></script>
 	<script type="text/javascript" src="/assets/js/fontawesome-all.min.js"></script>
 	<script type="text/javascript" src="/assets/js/webfont.js"></script>
 	<script type="text/javascript" src="/assets/js/main.js"></script>

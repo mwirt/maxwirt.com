@@ -1,3 +1,5 @@
+body
+	max-width: 100%
 a
 	color: $red
 a:hover
@@ -20,6 +22,34 @@ a.black:hover
 	background-position: center 
 	height: 100%
 	min-height: 100vh
+
+.index-background
+	background-repeat: no-repeat
+	background-attachment: fixed
+	background-position: center
+	background-size: cover
+	color: #fff
+	height: 100%
+	min-height: 100vh
+
+.index-title
+	font-size: 4rem
+	width: 100%
+	text-decoration: none
+
+.index-tagline
+	width: 100%
+
+.index-blurb
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	margin-left: 260px
+	@media(max-width: 821px)
+	margin-left: 0px
+	a
+		color: #fff
 
 .liner
 	background-color: rgba(255,255,255,0.8)
@@ -57,3 +87,12 @@ code
 
 .padded-row
 	padding: 50px 0
+
+.entries-heading, .heading-wrap
+	padding-left: 15px
+
+.padded-top
+	padding-top: 25px
+
+.gl-gallery
+	padding: 0px 15px

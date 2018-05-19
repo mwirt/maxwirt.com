@@ -11,6 +11,10 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.marginLeft = "-260px";
 }
+function navFunction() {
+    $("#nav-icon").toggleClass("fa-bars fa-times");
+    $("#mySidenav").toggleClass("menu-visible");
+};
 
 // random background colors
 

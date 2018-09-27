@@ -5,8 +5,25 @@ description: The personal website of Max Wirt.
 share-image: shattered-mirrors.png
 background-image: tile50.jpg
 ---
+<marquee behavior="scroll" direction="left"><h2>max wirt maximum website</h2></marquee>
 <div class="container">
-<div class="video-padding">
-{% include video.html ratio="16by9" url="https://www.youtube.com/embed/PJwt2dxx9yg" %}
+	<span class="entries-heading"></span>
+<div class="post-index">
+{% for post in site.posts %}
+<a class="post-index-link" href="{{ site.url }}{{ post.url }}">
+<div class="post-index-post-wrap randombg">
+<div class="post-index-post">
+<h4 class="post-index-title">{{ post.title }}</h4>
+<h5 class="post-index-date">{{ post.date | date_to_string }}</h5>
+{% if post.post-header-image %}
+<div style="background-image: url('/assets/img/{{ post.post-header-image }}')" class="post-banner"></div>
+{% else %}
+{% endif %}
+<p class="post-index-tagline">{{ post.post-tagline }}</p>
+<span class="read-more"><i class="fas fa-book"></i><p>Read More</p></span>
+</div>
+</div>
+</a>
+{% endfor %}
 </div>
 </div>

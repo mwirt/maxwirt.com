@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="theme-color" content="#26C6DA">
-    <meta name="description" content="This is the personal website of Max Wirt.
-">
+    <meta name="description" content="Last week, I had some free time so I set up OpenCV on my computer, pulled out a thrift store webcam, and started tinkering.">
     <meta name="robots" content="index,follow">
 	<meta name="googlebot" content="index,follow">
 	<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
@@ -16,20 +15,20 @@
 	<meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
 	<meta name="rating" content="General">
 	<meta name="geo.region" content="US-MI" />
-<meta name="geo.placename" content="Detroit" />
+	<meta name="geo.placename" content="Detroit" />
 	<meta property="og:url" content="http://maxwirt.com/2018/05/14/video-feedback-opencv/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Feedback Loops with OpenCV">
-<meta property="og:image" content="http://maxwirt.com/assets/img/">
-<meta property="og:description" content="">
-<meta property="og:site_name" content="Max Wirt Maximum Website">
-<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Feedback Loops with OpenCV&nbsp;//&nbsp;Max Wirt Maximum Website">
+	<meta property="og:image" content="http://maxwirt.com/assets/img/opencv/opencvloop9.jpg">
+	<meta property="og:description" content="Last week, I had some free time so I set up OpenCV on my computer, pulled out a thrift store webcam, and started tinkering.">
+	<meta property="og:site_name" content="Max Wirt Maximum Website">
+	<meta property="og:locale" content="en_US">
 	<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@site_account"><!--@username of website. Either twitter:site or twitter:site:id is required.-->
-<meta name="twitter:url" content="http://maxwirt.com/2018/05/14/video-feedback-opencv/">
-<meta name="twitter:title" content="Feedback Loops with OpenCV">
-<meta name="twitter:description" content="">
-<meta name="twitter:image" content="http://maxwirt.com/assets/img/">
+	<meta name="twitter:site" content="@site_account"><!--@username of website. Either twitter:site or twitter:site:id is required.-->
+	<meta name="twitter:url" content="http://maxwirt.com/2018/05/14/video-feedback-opencv/">
+	<meta name="twitter:title" content="Feedback Loops with OpenCV&nbsp;//&nbsp;Max Wirt Maximum Website">
+	<meta name="twitter:description" content="Last week, I had some free time so I set up OpenCV on my computer, pulled out a thrift store webcam, and started tinkering.">
+	<meta name="twitter:image" content="http://maxwirt.com/assets/img/opencv/opencvloop9.jpg">
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -46,9 +45,10 @@
 	<script type="text/javascript" src="/assets/js/webfont.js"></script>
 	<script type="text/javascript" src="/assets/js/main.js"></script>
 </head>
+
 <body>
-<div class="default-wrap">
-<header id="mySidenav" class="default-header">
+    <div class="default-wrap">
+        <header id="mySidenav" class="default-header">
 	<div class="default-header-inner">
 		<div class=""><a href="/"><img class="img-fluid default-header-photo" src="/assets/img/max-wirt.jpg" alt="An artistic picture of Max Wirt"></a></div>
 		<div id="menu">
@@ -62,7 +62,9 @@
 		</ul>
 		<nav class="site-navigation">
 			<ul>
+				<!--
 				<a href="/blog"><li class="nav-item">Blog<span class="emoji-wrap"><i class="em em-notebook"></i></span></li></a>
+			-->
 				<!--
 				<a href="/about"><li class="nav-item">About Me<span class="emoji-wrap"><i class="em em-slightly_smiling_face"></i></span></li></a>
 			-->
@@ -89,19 +91,20 @@
 	</div>
 	</div>
 </header>
-<div class="default-inner">
-<div class="mobile-header">
-	<span class="toggle-button" onclick="navFunction()"><i id="nav-icon" class="fas fa-bars"></i></span>
-</div>
-<div class="container-fluid">
-	<div class="inner-container">
-	
-<div style="background-image: url('/assets/img/bg/tile1.jpg');" class="background">
+        <div class="default-inner">
+            <div class="mobile-header">
+                <span class="toggle-button" onclick="navFunction()"><i id="nav-icon" class="fas fa-bars"></i></span>
+            </div>
+            <div class="container-fluid">
+                <div class="inner-container">
+                    <div style="background-image: url('/assets/img/bg/tile1.jpg');" class="background">
 	<div class="liner">
 
 <div class="post-container">
 <article class="container">
+	<!--
 	<a class="black" href="/blog"><span class="back-wrap"><span class="back-icon"><i class="fa fa-backward icon"></i></span>Blog Index</span></a>
+-->
 <div class="entry">
 	<div class="blog-text post-header"><h2 class="post-title">Feedback Loops with OpenCV</h2>
 	<h3 class="post-date">14 May 2018</h3>
@@ -110,23 +113,22 @@
 <div style="background-image: url('/assets/img/opencv/opencvloop9.jpg')" class="post-banner"></div>
 
 
-  <div class="blog-text">Last week I had some free time so I learned <a href="https://docs.opencv.org/3.4/index.html">how to set up OpenCV</a>, pulled out a thrift store webcam, and started tinkering. <a href="https://opencv.org/">OpenCV</a> is a suuuper cooool and powerful library that you can use to do all kinds of amazing things with robotics and security systems and smart phones and its changing the world and so of course I <i>had</i> to sit down with it and make my face look weird.
-  </div>
-
+<div class="blog-text">
+    Last week I had some free time so I learned <a href="https://docs.opencv.org/3.4/index.html">how to set up OpenCV</a>, pulled out a thrift store webcam, and started tinkering. <a href="https://opencv.org/">OpenCV</a> is a suuuper cooool and powerful library that you can use to do all kinds of amazing things with robotics and security systems and smart phones and its changing the world and so of course I <i>had</i> to sit down with it and make my face look weird.
 </div>
 <div class="blog-text">
-  I played around with some of the blurs and color filtering capabilities just to kinda see how it all worked and got some promising results:
+    I played around with some of the blurs and color filtering capabilities just to kinda see how it all worked and got some promising results:
 </div>
 <div class="row align-items-center">
-	<div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop30.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop30.png"></a></div>
-  <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop29.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop29.png"></a></div>
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop30.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop30.png"></a></div>
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop29.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop29.png"></a></div>
 </div>
-  <div class="row align-items-center rowfix">
-  <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop25.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop25.png"></a></div>
-  <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop27.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop27.jpg"></a></div>
+<div class="row align-items-center rowfix">
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop25.png" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop25.png"></a></div>
+    <div class="img-wrap col-sm-6"><a href="/assets/img/opencv/opencvloop27.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop27.jpg"></a></div>
 </div>
 <div class="blog-text centered-text">
-  I found a setting I liked, turned the camera toward the monitor to create a loop, and got some lovely glitchy goodness...
+    I found a setting I liked, turned the camera toward the monitor to create a loop, and got some lovely glitchy goodness...
 </div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop1.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop1.jpg"></a></div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop2.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop2.jpg"></a></div>
@@ -134,12 +136,12 @@
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop4.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop4.jpg"></a></div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop5.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop5.jpg"></a></div>
 <div class="blog-text">
-   <p>There's additional images at the bottom of this post.</p>
-   <p>OpenCV is capable of doing a great deal more than just producing trippy images but as someone who loves trippy images, I'm quite pleased with this kind of thing. Maybe one day I'll figure out how to do all the important life changing stuff with OpenCV, but for now enjoy these bent and beautiful computer paintings.</p>
+    <p>There's additional images at the bottom of this post.</p>
+    <p>OpenCV is capable of doing a great deal more than just producing trippy images but as someone who loves trippy images, I'm quite pleased with this kind of thing. Maybe one day I'll figure out how to do all the important life changing stuff with OpenCV, but for now enjoy these bent and beautiful computer paintings.</p>
 </div>
 <div class="blog-text">I used python for this and if you are interested in looking at the code I used to achieve these images, see below! You'll need to have OpenCV installed though which itself can be a challenge. I found it easiest to use the <a href="https://www.anaconda.com/what-is-anaconda/">Anaconda</a> package manager which I already had on my machine. </div>
 <div class="code-wrap">
-	<code>
+    <code>
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">cv2</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
@@ -235,17 +237,18 @@
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop21.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop21.jpg"></a></div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop22.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop22.jpg"></a></div>
 <div class="img-wrap col-sm-12"><a href="/assets/img/opencv/opencvloop23.jpg" data-fancybox="gallery"><img class="blog-img img-fluid" src="/assets/img/opencv/opencvloop23.jpg"></a></div>
-
 </div>
+<!--
 <a class="black" href="/blog"><div class="back-wrap footer-back-wrap"><span class="back-icon"><i class="fa fa-backward icon"></i></span>Blog Index</div></a>
+-->
 </article>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html>
 
+</html>
